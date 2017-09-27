@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--- Made By: Samir Nasser and Prabhjot Dev--->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Information</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+  </head>
+  <body id="body">
+    <main id="main">
+      <form  method="GET" name="myForm">
+        <h1>Human Resources</h1>
+        <h2>Contact Information</h2>
+        <div id="firstBlock">
+          <input type="text" name="fname" autofocus="" id="fname" placeholder="First Name" onkeyup="return enterFName()"><br>
+          <input type="text" name="lname" id="lname" placeholder="Last Name" onkeyup="return enterLName()"><br>
+          <input type="email" name="email" id="email" placeholder="Email" onkeyup="return enterEmail()"><br>
+          <img src="images/nvidia1.png" id="image">
+        </div>
+        <h2>Recruitment</h2>
+        <div id="secondBlock">
+          <div id="leftSecond">
+            <input type="text" name="years" id="years" placeholder="Years of Experience" onkeyup="return enterYears()"><br>
+            <label>Start Date :</label>
+            <input type="date" name="startDate" id="date"><br>
+            <input checked="checked" type="radio" name="payment" value="1"/>
+            <label for="rd1">Salary</label><br/>
+            <input type="radio"  name="payment" value="2"/>
+            <label for="rd2">Salary with Bonus</label><br/>
+            <input type="radio" name="payment"  value="3"/>
+            <label for="rd3">Commission Only</label><br/>
+          </div>
+          <div id="rightSecond">
+            <div class="chk">
+              <p id="checkbox"></p>
+              <input type="checkbox" name="EAST" id="east" value="1"/>
+              <label for="chk1">EAST</label><br/>
+            </div>
+            <div class="chk">
+              <input type="checkbox" name="WEST" id="west" value="2"/>
+              <label for="chk2">WEST</label><br/>
+            </div>
+            <div class="chk">
+              <input type="checkbox" name="NORTH" id="north" value="3"/>
+              <label for="chk3">NORTH</label><br/>
+            </div>
+            <div class="chk">
+              <input type="checkbox" name="SOUTH" id="south" value="4"/>
+              <label for="chk4">SOUTH</label><br/>
+            </div>
+          </div>
+        </div>
+        <h2>Other Information</h2>
+        <div id="thirdBlock">
+          <label>  Number of references:</label>
+          <input type="range" min="1" max="5" onchange="updateTextInput(this.value);" id="range" onkeyup="return enterRange()">
+          <input type="text" id="textInput" value="" placeholder="3" onkeyup="return enterRange()"><br>
+          <textarea placeholder="Comments"></textarea>
+          <br>
+          <select id="gender" name="Gender:" onkeyup="return enterGender()">
+            <option value="0">Gender</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+        </div>
+        <div id="button">
+          <input type="button" id="bt1" name="submit" value="Submit" class="button" onclick="validateSubmit(); setVisibility('sub3');" >
+          <input type="reset" name="reset" value="Reset" class="button" onclick="formReset()" >
+        </div>
+        <div id="sub3">
+          <h2>Information Entered</h2>
+          <div id="userInfo">
+            <div class="fields2">
+              <label class="fields">First Name:</label><br>
+              <label class="fields">Last Name:</label><br>
+              <label class="fields">Email:</label><br>
+              <label class="fields">Years of Experience:</label><br>
+            </div>
+            <div class="lists">
+              <label id="firstN" class="list"></label><br>
+              <label id="lastN" class="list"></label><br>
+              <label id="emailL" class="list"></label><br>
+              <label id="YearsL" class="list"></label><br>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+    <script src="scripts/myScripts.js"></script>
+  </body>
+</html>
